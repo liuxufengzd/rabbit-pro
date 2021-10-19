@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /rabbit
+spring:
+  application:
+    name: rabbit-publisher
+  rabbitmq:
+    host: 192.168.152.131
+    port: 5672
+    virtual-host: /ems
+    username: ems
+    password: ems

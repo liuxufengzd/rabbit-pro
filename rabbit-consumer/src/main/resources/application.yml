@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: rabbit-consumer
+    # rabbitmq 相关设置
+  rabbitmq:
+    host: 192.168.152.131
+    port: 5672
+    virtual-host: /ems
+    username: ems
+    password: ems
+    # 为了实现能者多劳，必须限流
+    listener:
+      simple:
+        prefetch: 1
+        # 这里可以统一设置consumer的ack模式
+#        acknowledge-mode: manual
+
